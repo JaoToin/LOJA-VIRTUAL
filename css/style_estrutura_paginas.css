@@ -1,12 +1,25 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Playwrite+IT+Trad:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+    body {
+       
+        
+        /* Define a cor de fundo */
+        background-color: var(--cor_lnk_menu);
+        
+        /* Cria um granulado bem suave direto no código */
+        background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.04"/></svg>');
+    }
+
 
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Playwrite Italia Tradizionale;
+    font-family:Caveat;
 }
 
 :root{
@@ -14,6 +27,7 @@
     --cor_botao01:#d08aff;
     --cor_lnk_menu:#ffffff;
     --cor_actev:#ac31dd;
+
 }
 
 #geral{
