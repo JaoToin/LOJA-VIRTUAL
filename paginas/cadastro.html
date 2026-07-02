@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLORAIS DO JARDIM</title>
+
+    <link rel="shortcut icon" href="imagens/Gemini_Generated_Image_jta9gbjta9gbjta9.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
+</head>
+
+<body>
+
+    <main id="geral">
+
+        <header id="cabecalho">
+
+            <div id="logo">
+
+                <a href="index.html">
+
+                    <img src="imagens/Screenshot_2026-07-02-00-46-20-572_com.miui.gallery.png" alt="logo">
+
+                </a>
+
+            </div>
+
+            <nav id="menu">
+
+                <ul>
+
+                    <li><a href="index.html" class="lnk_menu">HOME</a></li>
+                    <li><a href="paginas/cadastro.html" class="lnk_menu">CADASTRO</a></li>
+                    <li><a href="paginas/sobre.html" class="lnk_menu">SOBRE</a></li>
+
+                </ul>
+
+            </nav>
+
+            <div id="div-icones">
+
+                <ul>
+
+                    <li><a href="paginas/login.html" class="lnk_icone"><img src="imagens/icones/icones/login.png"
+                                alt="LOGIN"></a></li>
+                    <li><a href="paginas/carrinho.html" class="lnk_icone"><img src="imagens/icones/icones/carrinho.png"
+                                alt="CARRINHO"></a></li>
+
+                </ul>
+            </div>
+
+        </header>
+
+        <section id="formulario">
+
+            <h3>CADASTRO</h3>
+
+            <form id="form-pessoa">
+                
+                <label for="nome">INSIRA SEU NOME</label>
+                <input type="text" id="nome" name="nome" class="input01" required maxlength="60" placeholder="DIGITE SEU NOME">
+
+                <label for="cpf">CPF</label>
+                <input type="number" id="cpf" name="cpf" class="input02" required maxlength="14" placeholder="DIGITE SEU CPF">
+
+                <label for="data-nascimento">DATA DE NASCIMENTO</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" class="input01" required>
+
+                <label for="sexo">SEXO</label>
+                <input type="radio" value="M" id="sexo" name="sexo" class="inputOP" required >MASCULINO
+                <input type="radio" value="F" id="sexo" name="sexo" class="inputOP" required >FEMININO
+                <input type="radio" value="ND" id="sexo" name="sexo" class="inputOP" required >NÃO DECLARAR
+
+                <label for="cep">CEP</label>
+                <input type="number" id="cep" name="cep" class="input01" required maxlength="8" placeholder="DIGITE SEU CEP">
+
+
+                <div id="div-dados-endereco" class="oculto">
+
+                    <label for="lorgadouro">LORGADOURO</label>
+                    <input type="text" id="lorgadouro" name="lorgadouro" class="input01" required >
+
+                    <label for="num-residencial">NÚMERO</label>
+                    <input type="text" id="num-residencial" name="num-residencial" class="input01" required>
+
+                    <label for="complemento">COMPLEMENTO</label>
+                    <input type="text" id="complemento" name="complemento" class="input01" required>
+
+                    <label for="bairro">BAIRRO</label>
+                    <input type="text" id="bairro" name="bairro" class="input01" required >
+
+                    <label for="localidade">LOCALIDADE</label>
+                    <input type="text" id="localidade" name="localidade" class="input01" >
+
+                    <label for="uf">UF</label>
+                    <input type="number" id="uf" name="uf" class="input01" required >
+
+                </div>
+
+
+
+            </form>
+
+
+        </section>
+
+    
+        <footer id="rodape">
+            <div id="dadosloja">
+                <h2>RUA DAS FLORES, 1256 - CENTRO</h2>
+                <h1>ARACAJU - SERGIPE</h1>
+            </div>
+
+            <div id="icones_sociais">
+                <ul>
+                    <li><a href="https://www.instagram.com/seu_usuario"><img src="../imagens/icones/icones/instagram.png" alt=""></a></li>
+
+                    <li><a href="https://www.facebook.com/seu_usuario"><img src="../imagens/icones/icones/facebook.jpg" alt=""></a></li>
+
+                  
+                </ul>
+            </div>
+
+            <div id="div-cartoes">
+                <img src="../imagens/icones/icones/hipercard.png" alt="Hipercard">
+                <img src="../imagens/icones/icones/visa.png" alt="Visa">
+                <img src="../imagens/icones/icones/master_card.png" alt="Mastercard">
+            </div>
+        </footer>
+
+
+
+    </main>
+
+
+
+
+</body>
+
+</html>

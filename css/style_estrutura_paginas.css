@@ -1,19 +1,18 @@
 
-
+/* ==========================================================================
+   1. Variáveis de Cores e Configurações Globais
+   ========================================================================== */
+  
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
-
-    body {
-       
-        
-        /* Define a cor de fundo */
-        background-color: var(--cor_lnk_menu);
-        
-        /* Cria um granulado bem suave direto no código */
-        background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.04"/></svg>');
-    }
-
+body{
+    background-image: url('../imagens/');
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
 
 *{
     margin: 0px;
@@ -23,105 +22,237 @@
 }
 
 :root{
-    --cor_principal:#72158a;
+    --cor_principal:#922bac;
     --cor_botao01:#d08aff;
     --cor_lnk_menu:#ffffff;
     --cor_actev:#ac31dd;
-
+    --cor_button:#d08aff;
+    --cor-primaria: #6A8E7F; /* Verde suave (natureza/folhas) */
+    --cor-secundaria: #9C89B8; /* Roxo/Lavanda (flores) */
+    --cor-destaque: #F0A6CA; /* Rosa suave para hover */
+    --cor-fundo: #F8F9FA; /* Off-white para o fundo da página */
+    --cor-fundo-card: #FFFFFF;
+    --cor-texto: #4A4A4A;
+    --cor-texto-claro: #FFFFFF;
 }
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   2. Estrutura Principal
+   ========================================================================== */
 
 #geral{
-    margin: 20px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  
+    min-height: 100vh;
 }
 
+/* ==========================================================================
+   3. Cabeçalho (Header)
+   ========================================================================== */
+
 #cabecalho{
-    width: 100%;
-    height: 200px;
-    background-color: var(--cor_principal);
-    padding: 5px;
-    margin: 20px 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-color: var(--cor_principal);
+    padding: 15px 5%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #logo img{
-    width: 250px;
-    height: 160px;
+    max-height: 100px; /* Ajuste conforme o tamanho real da sua logo */
+    width: auto;
 }
 
-#menu{
+#logo img:hover{
+    background-color: var(--cor_botao01);
+    border-radius: 30px;
+}
 
-    width: 600px;
-    height: 200px;
+
+#menu ul{
     display: flex;
-    align-items: center;
+    gap: 30px;
+}
+.lnk_menu {
+    color: var(--cor-texto-claro);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.lnk_menu:hover {
+    color: var(--cor-destaque);
+}
+
+#div-icones ul {
+    display: flex;
+    gap: 20px;
+}
+
+#div-icones img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1); /* Deixa os ícones brancos se forem pretos */
+}
+
+#div-icones img:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   4. Barra de Pesquisa
+   ========================================================================== */
+   #pesquisa {
+    display: flex;
     justify-content: center;
+    padding: 30px 20px;
+    background-color: #E9ECEF;
 }
 
-#cabecalho ul{
+#pesquisa input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#pesquisa input:focus {
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 8px rgba(156, 137, 184, 0.3);
+}
+
+/* ==========================================================================
+   5. Vitrine de Produtos (Cards)
+   ========================================================================== */
+
+
+#cards{
+
+    width: 1000px;
+    min-height: 600px;
+    margin: 20px 0px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    cursor: pointer;
+}
+
+.card{
+    width: 250px;
+    min-height: 250px;
+    border: solid 1px var(--cor_principal);
+    padding: 15px;
     display: flex;
-    list-style: none;
-    gap: 100px;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 5px;
 }
 
-#div-icones img{
-    width: 50px;
-    height: 50px;
+.card h2{
+    text-transform: uppercase; 
+    letter-spacing: 5px;
+    margin: 10px 0px;
+}
+
+.card h3{
+    margin: 20px;
+}
+
+.card button{
+    width: 100%;
+    height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: none;
+    border-radius: 5px;
     
 }
 
-#menu a:link{
-    font-size: 1.3em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--cor_lnk_menu);
-
+.card:hover{
+    transform: translateY(-5px);
 }
 
-#menu a:visited{
-    font-size: 1.3em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--cor_lnk_menu);
-
+.card img{
+    width: 100%;
+    height: 250px;
 }
 
-#menu a:hover{
-    font-size: 1.3em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--cor_botao01);
-
+.card button:hover{
+    background-color:var(--cor_button);
+    cursor: pointer;
 }
 
-#menu a:active{
-    font-size: 1.3em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--cor_actev);
+/*FORMATÇÃO DO RODAPE(FOOTER)*/
 
-}
-
-#pesquisa{
-    width: 1000px;
-    height: 180px;
+#rodape {
+    background-color: var(--cor_principal);
+    color: var(--cor-texto-claro);
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+    padding: 30px 5%;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    gap: 20px;
 }
 
-#pesquisa input{
-    width: 600px;
-    height: 80px;
-    padding: 20px;
-    border-radius: 8px;
-    font-size: 2em;
+#dadosloja{
+    text-align: center;
 }
 
+#dadosloja h2{
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
 
+#dadosloja h1 {
+    font-size: 1.3rem;
+}
+
+#icones_sociais ul {
+    display: flex;
+    gap: 15px;
+}
+
+#icones_sociais img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#icones_sociais img:hover {
+    transform: translateY(-3px);
+}
+
+#div-cartoes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#div-cartoes img {
+    height: 30px;
+    width: auto;
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
