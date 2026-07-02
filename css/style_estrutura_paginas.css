@@ -1,0 +1,113 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Playwrite+IT+Trad:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Playwrite Italia Tradizionale;
+}
+
+:root{
+    --cor_principal:#72158a;
+    --cor_botao01:#d08aff;
+    --cor_lnk_menu:#ffffff;
+    --cor_actev:#ac31dd;
+}
+
+#geral{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cabecalho{
+    width: 100%;
+    height: 200px;
+    background-color: var(--cor_principal);
+    padding: 5px;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img{
+    width: 250px;
+    height: 160px;
+}
+
+#menu{
+
+    width: 600px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cabecalho ul{
+    display: flex;
+    list-style: none;
+    gap: 100px;
+}
+
+#div-icones img{
+    width: 50px;
+    height: 50px;
+    
+}
+
+#menu a:link{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_lnk_menu);
+
+}
+
+#menu a:visited{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_lnk_menu);
+
+}
+
+#menu a:hover{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_botao01);
+
+}
+
+#menu a:active{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_actev);
+
+}
+
+#pesquisa{
+    width: 1000px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pesquisa input{
+    width: 600px;
+    height: 80px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 2em;
+}
+
+
