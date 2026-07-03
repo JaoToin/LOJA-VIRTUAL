@@ -19,17 +19,17 @@ body{
 }
 
 :root{
-    --cor_principal:#922bac;
-    --cor_botao01:#d08aff;
+    --cor_principal:#6a0a82;
+    --cor_botao01:#cd99ef;
     --cor_lnk_menu:#ffffff;
     --cor_actev:#ac31dd;
     --cor_button:#d08aff;
-    --cor-primaria: #6A8E7F; /* Verde suave (natureza/folhas) */
+    --cor-primaria: #621c88; /* Verde suave (natureza/folhas) */
     --cor-secundaria: #9C89B8; /* Roxo/Lavanda (flores) */
     --cor-destaque: #F0A6CA; /* Rosa suave para hover */
     --cor-fundo: #F8F9FA; /* Off-white para o fundo da página */
     --cor-fundo-card: #FFFFFF;
-    --cor-texto: #4A4A4A;
+    --cor-texto: #4a4a4a;
     --cor-texto-claro: #FFFFFF;
 }
 
@@ -92,6 +92,7 @@ a{
 
 .lnk_menu:hover {
     color: var(--cor-destaque);
+    transform: translateY(-5px);
 }
 
 #div-icones ul {
@@ -260,4 +261,27 @@ a{
     background-color: white;
     padding: 2px 5px;
     border-radius: 4px;
+}
+
+
+
+
+/* ==========================================================================
+   7. Responsividade (Telas de Celular)
+   ========================================================================== */
+@media (max-width: 768px) {
+    #cabecalho {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #rodape {
+        flex-direction: column;
+        text-align: center;
+    }
 }

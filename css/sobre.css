@@ -1,0 +1,43 @@
+@import url(../css/style_estrutura_paginas.css);
+@import url(../css/style_cadastrro.css);
+
+#texto h3{
+     color: var(--cor_principal);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 30px;
+
+}
+
+#texto p{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;;
+    display: block;
+    margin: 50px;
+    padding: 10px;
+    text-align: justify;
+    line-height: 35px;
+}
+
+/*
+seletor{
+    propriedade: valor;
+    propriedade: valor;
+}
+*/
+
+
+#paragrafo01{
+
+    margin-left: 200px;
+}
+
+#paragrafo02{
+    margin-right: 200px ;
+}
+/* 
+no class
+*/
