@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLORAIS DO JARDIM</title>
 
-    <link rel="shortcut icon" href="imagens/Gemini_Generated_Image_jta9gbjta9gbjta9.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../imagens/Screenshot_2026-07-02-00-46-20-572_com.miui.gallery.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
+    <link rel="stylesheet" href="../css/style_cadastrro.css">
 </head>
 
 <body>
@@ -19,9 +20,9 @@
 
             <div id="logo">
 
-                <a href="index.html">
+                <a href="../index.html">
 
-                    <img src="imagens/Screenshot_2026-07-02-00-46-20-572_com.miui.gallery.png" alt="logo">
+                    <img src="../imagens/Screenshot_2026-07-02-00-46-20-572_com.miui.gallery.png" alt="logo">
 
                 </a>
 
@@ -31,9 +32,9 @@
 
                 <ul>
 
-                    <li><a href="index.html" class="lnk_menu">HOME</a></li>
-                    <li><a href="paginas/cadastro.html" class="lnk_menu">CADASTRO</a></li>
-                    <li><a href="paginas/sobre.html" class="lnk_menu">SOBRE</a></li>
+                    <li><a href="../index.html" class="lnk_menu">HOME</a></li>
+                    <li><a href="/paginas/cadastro.html" class="lnk_menu">CADASTRO</a></li>
+                    <li><a href="/paginas/sobre.html" class="lnk_menu">SOBRE</a></li>
 
                 </ul>
 
@@ -43,9 +44,9 @@
 
                 <ul>
 
-                    <li><a href="paginas/login.html" class="lnk_icone"><img src="imagens/icones/icones/login.png"
+                    <li><a href="../paginas/login.html" class="lnk_icone"><img src="../imagens/icones/icones/login.png"
                                 alt="LOGIN"></a></li>
-                    <li><a href="paginas/carrinho.html" class="lnk_icone"><img src="imagens/icones/icones/carrinho.png"
+                    <li><a href="../paginas/carrinho.html" class="lnk_icone"><img src="../imagens/icones/icones/carrinho.png"
                                 alt="CARRINHO"></a></li>
 
                 </ul>
@@ -83,10 +84,10 @@
                     <input type="text" id="lorgadouro" name="lorgadouro" class="input01" required >
 
                     <label for="num-residencial">NÚMERO</label>
-                    <input type="text" id="num-residencial" name="num-residencial" class="input01" required>
+                    <input type="text" id="num-residencial" name="num-residencial" class="input02" required maxlength="10" placeholder="DIGITE NÚMERO DA RESIDENCIA">
 
                     <label for="complemento">COMPLEMENTO</label>
-                    <input type="text" id="complemento" name="complemento" class="input01" required>
+                    <input type="text" id="complemento" name="complemento" class="input01" maxlength="100" placeholder="DIGITE O COMPLEMENTO">
 
                     <label for="bairro">BAIRRO</label>
                     <input type="text" id="bairro" name="bairro" class="input01" required >
@@ -99,6 +100,10 @@
 
                 </div>
 
+                <div id="div-button">
+                    <button type="submit">ADICIONAR DADOS</button>
+                    <button type="reset">LIMPAR DADOS</button>
+                </div>
 
 
             </form>
@@ -128,6 +133,8 @@
                 <img src="../imagens/icones/icones/visa.png" alt="Visa">
                 <img src="../imagens/icones/icones/master_card.png" alt="Mastercard">
             </div>
+
+            
         </footer>
 
 

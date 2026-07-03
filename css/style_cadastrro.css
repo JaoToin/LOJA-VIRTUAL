@@ -1,0 +1,77 @@
+/* ==========================================================================
+   importando o css de paginas 
+   ========================================================================== */
+@import url(style_estrutura_paginas.css);
+
+/* ==========================================================================
+   FORMATANDO SECTION formulario
+   ========================================================================== */
+
+   
+#formulario{
+    width: 1000px;
+    min-height: 20px;
+    padding: 40px 5%;
+
+}
+
+
+h3{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px;
+}
+
+label{
+    display: block;
+    margin: 20px 0px; 
+    text-transform: uppercase;
+
+
+}
+
+.input01, .input02{
+    border: var(--cor_principal);
+    border-bottom:1px solid var(--cor_principal);
+    font-size: 1.3em;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.input01{
+    width: 800px;
+}
+
+.input02{
+    width: 400px;
+}
+
+.input01, .input02:hover{
+    transform: translateY(-5px);
+}
+
+#div-button{
+    height: 60px;
+    margin: 40px 0px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div-button button{
+    width: 200px;
+    height: 40px;
+    margin-left: 20px ;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0.8em;
+    border-radius: 25px;
+
+}
+
+button:hover{
+    background-color: var(--cor-destaque);
+    transform: translateY(-5px);
+    border-radius: 25px;
+}
