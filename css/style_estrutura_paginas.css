@@ -48,9 +48,9 @@ a{
 #geral{
     display: flex;
     flex-direction: column;
-  
     min-height: 100vh;
 }
+
 
 /* ==========================================================================
    3. Cabeçalho (Header)
@@ -73,6 +73,8 @@ a{
 #logo img:hover{
     background-color: var(--cor_botao01);
     border-radius: 30px;
+    transform: translateY(-5px);
+
 }
 
 

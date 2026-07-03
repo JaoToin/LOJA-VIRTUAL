@@ -7,13 +7,18 @@
    FORMATANDO SECTION formulario
    ========================================================================== */
 
-   
+
 #formulario{
     width: 1000px;
     min-height: 20px;
     padding: 40px 5%;
-
+    
 }
+
+body form{
+    text-align: center;
+}
+
 
 
 h3{
@@ -74,4 +79,8 @@ button:hover{
     background-color: var(--cor-destaque);
     transform: translateY(-5px);
     border-radius: 25px;
+}
+
+.oculto{
+    display: none;
 }
