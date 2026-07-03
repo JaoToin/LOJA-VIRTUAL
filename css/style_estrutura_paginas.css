@@ -114,14 +114,15 @@ a{
 /* ==========================================================================
    4. Barra de Pesquisa
    ========================================================================== */
-   #pesquisa {
+   #pesquisa, #titulo{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 30px 20px;
     background-color: #E9ECEF;
 }
 
-#pesquisa input {
+#pesquisa input{
     width: 100%;
     max-width: 500px;
     padding: 12px 20px;

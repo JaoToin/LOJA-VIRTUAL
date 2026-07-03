@@ -1,7 +1,7 @@
 @import url(../css/style_estrutura_paginas.css);
 @import url(../css/style_cadastrro.css);
 
-#texto h3{
+#titulo h3{
      color: var(--cor_principal);
     font-size: 2.2em;
     margin-bottom: 20px;
@@ -41,3 +41,12 @@ seletor{
 /* 
 no class
 */
+
+#div-texto{
+    background-color: rgb(223, 189, 255);
+    margin: 10%;
+    border-radius: 25px;
+
+}
+
+
