@@ -1,89 +1,133 @@
-#conteudo-carrinho {
+/* CONTAINER PRINCIPAL (Garante as duas colunas perfeitas) */
+#carrinho-container-principal {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
+    flex-direction: row;
     justify-content: space-between;
-    gap: 40px;
+    align-items: flex-start;
+    gap: 30px;
     padding: 40px 5%;
     width: 100%;
     box-sizing: border-box;
 }
 
+/* COLUNA DA ESQUERDA: LISTA DE PRODUTOS */
 #cards {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex-grow: 1;
+    flex-grow: 1; /* Ocupa dinamicamente o espaço da esquerda */
     padding: 0;
 }
 
+/* O CARD INDIVIDUAL (Agora responsivo e elegante) */
 .card {
     display: flex;
     flex-direction: row; 
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    width: 1200px;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    width: 100%; /* Mudado de 1200px para 100% */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
     box-sizing: border-box;
 }
 
-#result {
+/* IMAGEM DO PRODUTO */
+.img_card {
+    width: 120px; /* Reduzido de 250px para equilibrar no formato linha */
+    height: 120px;
+    object-fit: cover; 
+    border-radius: 12px;
+}
+
+/* COLUNA DA DIREITA: RESUMO DO CARRINHO */
+#resumo-carrinho {
     flex-shrink: 0;
-    width: 380px; }
+    width: 380px; 
+}
 
-
+/* FORMULÁRIO DE RESUMO (Sem a altura gigante fixa de 1000px) */
 #valore {
     display: flex;
     flex-direction: column; 
-    border-radius: 25px;
+    border-radius: 24px;
     width: 100%;
     padding: 30px;
-    border: 1px solid #000000;
-    text-align: center;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
-    height: 1000px;
 }
 
+/* CAIXAS INTERNAS (CEP, Valores, Total) */
 #localizador, 
 #valor-total, 
 #div-total-pagar {
-    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    border-radius: 16px;
     width: 100%; 
     padding: 20px;
-    border: 1px solid #000000;
+    border: 1px solid #f0f0f0;
+    background-color: #fafafa; /* Um fundo levemente cinza para destacar */
     margin-bottom: 20px;
     box-sizing: border-box;
-    
 }
 
-.img_card {
-    width: 250px;
-    height: 200px;
-    object-fit: cover; 
-    border-radius: 8px;
-    margin-bottom: 15px;
+/* LABELS (Títulos internos como "VALOR TOTAL") */
+#valore label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-#carrinho-container-principal {
-    display: flex;
-    flex-direction: row; /* Alinha produtos e resumo na horizontal */
-    justify-content: space-between;
-    align-items: flex-start; /* Alinha ambos pelo topo */
-    gap: 30px; /* Distância entre as duas colunas */
-    padding: 40px 5%;
+/* INPUT DE CEP */
+#local {
     width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
     box-sizing: border-box;
 }
 
-/* RESUMO DO CARRINHO (Direita) */
-#resumo-carrinho {
-    flex-shrink: 0; /* Impede que o formulário seja esmagado */
-    width: 380px; /* Largura fixa ideal para a lateral */
+/* BOTÕES DE AÇÃO */
+.confirma, .cancelar {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
 }
 
+.confirma {
+    background-color: #27ae60;
+    color: white;
+}
 
+.confirma:hover {
+    background-color: #219653;
+    transform: translateY(-1px);
+}
 
+.cancelar {
+    background-color: #f2f2f2;
+    color: #c0392b;
+}
 
+.cancelar:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+}
 
