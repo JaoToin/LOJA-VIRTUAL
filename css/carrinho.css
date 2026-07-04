@@ -1,0 +1,89 @@
+#conteudo-carrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: 1200px;
+    box-sizing: border-box;
+}
+
+#result {
+    flex-shrink: 0;
+    width: 380px; }
+
+
+#valore {
+    display: flex;
+    flex-direction: column; 
+    border-radius: 25px;
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #000000;
+    text-align: center;
+    box-sizing: border-box;
+    height: 1000px;
+}
+
+#localizador, 
+#valor-total, 
+#div-total-pagar {
+    border-radius: 25px;
+    width: 100%; 
+    padding: 20px;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    
+}
+
+.img_card {
+    width: 250px;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#carrinho-container-principal {
+    display: flex;
+    flex-direction: row; /* Alinha produtos e resumo na horizontal */
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha ambos pelo topo */
+    gap: 30px; /* Distância entre as duas colunas */
+    padding: 40px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* RESUMO DO CARRINHO (Direita) */
+#resumo-carrinho {
+    flex-shrink: 0; /* Impede que o formulário seja esmagado */
+    width: 380px; /* Largura fixa ideal para a lateral */
+}
+
+
+
+
+

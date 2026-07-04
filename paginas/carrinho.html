@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLORAIS DO JARDIM</title>
 
-    <link rel="shortcut icon" href="imagens/Gemini_Generated_Image_jta9gbjta9gbjta9.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../imagens/Gemini_Generated_Image_jta9gbjta9gbjta9.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_estrutura_paginas.css">
+    <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
+
+    <link rel="stylesheet" href="../css/style_cadastrro.css">
+
+    <link rel="stylesheet" href="../css/carrinho.css">
+
 </head>
 
 <body>
@@ -19,9 +24,9 @@
 
             <div id="logo">
 
-                <a href="index.html">
+                <a href="../index.html">
 
-                    <img src="imagens/Screenshot_2026-07-02-00-46-20-572_com.miui.gallery.png" alt="logo">
+                    <img src="../imagens/Screenshot_2026-07-02-00-46-20-572_com.miui.gallery.png" alt="logo">
 
                 </a>
 
@@ -31,9 +36,9 @@
 
                 <ul>
 
-                    <li><a href="index.html" class="lnk_menu">HOME</a></li>
-                    <li><a href="paginas/cadastro.html" class="lnk_menu">CADASTRO</a></li>
-                    <li><a href="paginas/sobre.html" class="lnk_menu">SOBRE</a></li>
+                    <li><a href="../index.html" class="lnk_menu">HOME</a></li>
+                    <li><a href="cadastro.html" class="lnk_menu">CADASTRO</a></li>
+                    <li><a href="sobre.html" class="lnk_menu">SOBRE</a></li>
 
                 </ul>
 
@@ -43,9 +48,9 @@
 
                 <ul>
 
-                    <li><a href="paginas/login.html" class="lnk_icone"><img src="imagens/icones/icones/login.png"
+                    <li><a href="login.html" class="lnk_icone"><img src="../imagens/icones/icones/login.png"
                                 alt="LOGIN"></a></li>
-                    <li><a href="paginas/carrinho.html" class="lnk_icone"><img src="imagens/icones/icones/carrinho.png"
+                    <li><a href="carrinho.html" class="lnk_icone"><img src="../imagens/icones/icones/carrinho.png"
                                 alt="CARRINHO"></a></li>
 
                 </ul>
@@ -53,88 +58,105 @@
 
         </header>
 
-        <section id="pesquisa">
-
-            <input type="text" name="pesquisa" id="pesquisa" placeholder="DIGITE SEU PRODUTO">
-
-        </section>
-
-        <section id="cards">
-
-            <div class="card">
-                <img src="imagens/lavanda.jpg" alt="flor lavanda " class="img_card">
-
-                <h2 class="tito_card">LAVANDA</h2>
-
-                <h3 class="valor_card">R$ 25,00</h3>
-
-                <button class="bnt_card">ADICIONAR</button>
-            </div>
-
-            <div class="card">
-                <img src="imagens/lotus.png" alt="flor de lotus " class="img_card">
-
-                <h2 class="tito_card">LOTUS</h2>
-
-                <h3 class="valor_card">R$ 50,00</h3>
-
-                <button class="bnt_card">ADICIONAR</button>
-            </div>
-
-            <div class="card">
-                <img src="imagens/begonia.jpg" alt="flor begonia " class="img_card">
-
-                <h2 class="tito_card">BEGONIA</h2>
-
-                <h3 class="valor_card">R$ 30,00</h3>
-
-                <button class="bnt_card">ADICIONAR</button>
-            </div>
-
-            <div class="card">
-                <img src="imagens/flor-de-maio.jpeg" alt="flor de maio " class="img_card">
-
-                <h2 class="tito_card">FLOR DE MAIO</h2>
-
-                <h3 class="valor_card">R$ 35,00</h3>
-
-                <button class="bnt_card">ADICIONAR</button>
-            </div>
-
-            <div class="card">
-                <img src="imagens/camelias.jpg" alt="flor camelia " class="img_card">
-
-                <h2 class="tito_card">CAMELIA</h2>
-
-                <h3 class="valor_card">R$ 15,00</h3>
-
-                <button class="bnt_card">ADICIONAR</button>
-            </div>
 
 
+        <div id="carrinho-container-principal">
 
-        </section>
+            <section id="cards">
+                <div class="card">
+                    <img src="../imagens/flor-de-maio.jpeg" alt="flor de maio" class="img_card">
+                    <h3 class="tito_card">FLOR DE MAIO</h3>
+                    <h2 class="carrinho_card">R$ 35,00 unidade</h2>
+                    <input type="number" id="valor" name="valor">
+                    <div id="div-result-itens01"></div>
+                </div>
+
+                <div class="card">
+                    <img src="../imagens/flor-de-maio.jpeg" alt="flor de maio" class="img_card">
+                    <h3 class="tito_card">FLOR DE MAIO</h3>
+                    <h2 class="carrinho_card">R$ 35,00 unidade</h2>
+                    <input type="number" id="valor02" name="valor02">
+                    <div id="div-result-itens02"></div>
+                </div>
+
+                <div class="card">
+                    <img src="../imagens/flor-de-maio.jpeg" alt="flor de maio" class="img_card">
+                    <h3 class="tito_card">FLOR DE MAIO</h3>
+                    <h2 class="carrinho_card">R$ 35,00 unidade</h2>
+                    <input type="number" id="valor03" name="valor03">
+                    <div id="div-result-itens03"></div>
+                </div>
+
+                <div class="card">
+                    <img src="../imagens/flor-de-maio.jpeg" alt="flor de maio" class="img_card">
+                    <h3 class="tito_card">FLOR DE MAIO</h3>
+                    <h2 class="carrinho_card">R$ 35,00 unidade</h2>
+                    <input type="number" id="valor04" name="valor04">
+                    <div id="div-result-itens04"></div>
+                </div>
+
+                <div class="card">
+                    <img src="../imagens/flor-de-maio.jpeg" alt="flor de maio" class="img_card">
+                    <h3 class="tito_card">FLOR DE MAIO</h3>
+                    <h2 class="carrinho_card">R$ 35,00 unidade</h2>
+                    <input type="number" id="valor05" name="valor05">
+                    <div id="div-result-itens05"></div>
+                </div>
+            </section>
+
+            <aside id="resumo-carrinho">
+                <form id="valore">
+                    <div id="localizador">
+                        <label for="local">CEP</label>
+                        <input type="number" id="local" name="local" required maxlength="9">
+                    </div>
+
+                    <div id="valor-total">
+                        <label for="total">VALOR TOTAL</label>
+                        <div id="div-result-valor-itens"></div>
+                        <label for="frete">VALOR DO FRETE</label>
+                        <div id="div-result-frete"></div>
+                    </div>
+
+                    <div id="div-total-pagar">
+                        <label for="total-pagar">TOTAL A PAGAR</label>
+                        <div id="div-result-totalpagar"></div>
+                    </div>
+
+                    <button type="submit" class="confirma">CONFIRMA COMPRA</button>
+                    <button type="reset" class="cancelar">CANCELAR COMPRA</button>
+                </form>
+            </aside>
+
+        </div>
 
         <footer id="rodape">
+
             <div id="dadosloja">
+
                 <h2>RUA DAS FLORES, 1256 - CENTRO</h2>
+
                 <h1>ARACAJU - SERGIPE</h1>
+
             </div>
 
             <div id="icones_sociais">
+
                 <ul>
-                    <li><a href="https://www.instagram.com/seu_usuario"><img src="imagens/icones/icones/instagram.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/seu_usuario"><img
+                                src="../imagens/icones/icones/instagram.png" alt=""></a></li>
 
-                    <li><a href="https://www.facebook.com/seu_usuario"><img src="imagens/icones/icones/facebook.jpg" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/seu_usuario"><img src="../imagens/icones/icones/facebook.jpg"
+                                alt=""></a></li>
 
-                  
+
                 </ul>
             </div>
 
             <div id="div-cartoes">
-                <img src="imagens/icones/icones/hipercard.png" alt="Hipercard">
-                <img src="imagens/icones/icones/visa.png" alt="Visa">
-                <img src="imagens/icones/icones/master_card.png" alt="Mastercard">
+                <img src="../imagens/icones/icones/hipercard.png" alt="Hipercard">
+                <img src="../imagens/icones/icones/visa.png" alt="Visa">
+                <img src="../imagens/icones/icones/master_card.png" alt="Mastercard">
             </div>
         </footer>
 
