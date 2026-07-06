@@ -23,7 +23,7 @@ const listaProdutos = ()=>{
         h2titulo.innerHTML = elem.titulo
 
         const divValor = document.createElement('h3')
-        divCrad.setAttribute('class','')
+        divValor.setAttribute('class','')
 
     })
 }
