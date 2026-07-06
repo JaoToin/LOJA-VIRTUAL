@@ -169,3 +169,5 @@ const plantasDoJardim = [
         secao: "Orquídeas e Flores Nobres"
     }
 ];
+
+export{plantasDoJardim}
