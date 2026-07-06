@@ -35,5 +35,9 @@ const listaProdutos = ()=>{
         divCrad.appendChild(h3Valor)
         divCrad.appendChild(bntCard)
 
+        section_cards.appendChild(divCrad)
+
     })
 }
+
+listaProdutos()

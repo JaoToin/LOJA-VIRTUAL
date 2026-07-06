@@ -110,3 +110,13 @@
     margin-bottom: 12px;
     transition: all 0.2s ease;
 }
+
+.cancelar:hover{
+    background-color: red;
+    color: #fafafa;
+}
+
+.confirma:hover{
+    background-color: green;
+    color: #fafafa;
+}
