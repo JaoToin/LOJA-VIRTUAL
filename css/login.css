@@ -1,0 +1,201 @@
+/* ==========================================================================
+   9. Tela de Login (#login-container)
+   ========================================================================== */
+
+/* Contêiner principal que centraliza o painel de login na tela */
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    margin: 40px auto;
+    background-color: var(--cor-fundo-card);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    overflow: hidden; /* Garante que os cantos arredondados cortem os filhos */
+    flex-grow: 1;      /* Empurra o rodapé para baixo se houver espaço sobressalente */
+}
+
+/* --------------------------------------------------------------------------
+   Painel Esquerdo (Ilustração e Dicas)
+   -------------------------------------------------------------------------- */
+.login-left {
+    flex: 1;
+    background-color: #F0F4F2; /* Um tom sutil derivado do seu verde sálvia */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.login-illustration {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.login-left-text {
+    color: var(--cor-texto);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.login-left-tip {
+    color: var(--cor-primaria);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Painel Direito (Formulário e Textos de Entrada)
+   -------------------------------------------------------------------------- */
+.login-right {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-right h2 {
+    color: var(--cor-primaria);
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.login-right h3 {
+    color: var(--cor-texto);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.login-right h3 span {
+    color: var(--cor-secundaria);
+    font-weight: 700;
+}
+
+/* Estrutura do Formulário */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-bottom: 2px solid #E9ECEF;
+    background-color: transparent;
+    font-size: 1rem;
+    color: var(--cor-texto);
+    outline: none;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de Interação nos Inputs */
+.input-group input:focus {
+    border-bottom-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+/* Link de Esquecimento da Senha */
+.forgot-pass {
+    align-self: flex-end;
+    font-size: 0.85rem;
+    color: var(--cor-texto);
+    margin-top: -8px;
+    transition: color 0.3s ease;
+}
+
+.forgot-pass:hover {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}
+
+/* Botão de Entrar */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(156, 137, 184, 0.3);
+}
+
+/* Link Criar uma Conta */
+.create-account {
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+    transition: color 0.3s ease;
+    margin-top: 10px;
+}
+
+.create-account:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Responsividade (Telas de Celular)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column; /* Empilha os blocos verticalmente */
+        margin: 20px 5%;
+        max-width: 90%;
+    }
+
+    .login-left {
+        padding: 30px 20px;
+    }
+
+    .login-illustration {
+        max-width: 180px; /* Reduz a ilustração no mobile */
+        margin-bottom: 15px;
+    }
+
+    .login-right {
+        padding: 35px 25px;
+    }
+    
+    .login-right h2 {
+        font-size: 1.8rem;
+    }
+}
