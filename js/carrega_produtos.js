@@ -41,3 +41,58 @@ const listaProdutos = ()=>{
 }
 
 listaProdutos()
+
+
+//filtrando as seções com a coleção map
+const listarSecoes = () => {
+    //criando a coleção map
+    const secoesFiltrada = new Map()
+
+    //percoreendo o array produtos e filtrando as seções 
+    produtos.foreach((elem,i) =>{
+
+        //criando a chave e o valor da coleção map a partir do id da seção 
+        secoesFiltrada.set(elem.id, elem)
+    })
+
+    //convertendo o map em arry
+    const secoesMenu = Array.from(secoesFiltrada.values())
+
+    //retornando o array convertido
+    return secoesMenu
+}
+
+
+
+const montarSecoes = () => {
+    const ulMenu  = document.querySelector('#menu-secoes')
+    ulMenu.innerHTML = ''
+
+    //percorendo o array das seções filtrada 
+    listaProdutos().foreach((elem, i) => {
+
+        //criando o elemento li
+        const liSecao = document.createElement('li')
+
+        //criando o elemento a 
+        const aSecao = document.createElement('a')
+        aSecao.setAttribute('href', '#')
+        aSecao.setAttribute('class', 'lnk-secao')
+        aSecao.innerHTML = elem.secao
+
+        //capturando o click dos links 
+        aSecao.addEventListener('click', ()=>{
+
+            //parar teste
+            console.log(elem.id)
+        })
+
+        //adicionando o elemento filho a no elemento li
+        liSecao.appendChild(aSecao)
+
+        //adicionando o elemento filho li no elemento do dom ul
+        ulMenu.appendChild(liSecao)
+    }) 
+}
+
+montarSecoes()
