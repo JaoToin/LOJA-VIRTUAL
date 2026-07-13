@@ -1,5 +1,6 @@
-import { plantasDoJardim } from "./produtos.js";
 
+//IMPORTANDO O ARQUIVO PRODUTOS.JS [ARRAY]
+import { plantasDoJardim } from "./produtos.js";
 
 
 //PEGANDO ELEMENTOS DO DOM
@@ -7,10 +8,10 @@ import { plantasDoJardim } from "./produtos.js";
 const section_cards = document.querySelector('#cards')
 
 
-const listaProdutos = ()=>{
+const listaProdutos = () => {
 
     section_cards.innerHTML = ''
-   
+
 }
 
 listaProdutos()
@@ -21,7 +22,7 @@ const listarSecoes = () => {
     const secoesFiltrada = new Map()
 
     //percoreendo o array produtos e filtrando as seções 
-    plantasDoJardim.forEach((elem, i) =>{
+    plantasDoJardim.forEach((elem, i) => {
         //criando a chave e o valor da coleção map a partir do id da seção 
         secoesFiltrada.set(elem.id_secao, elem)
     })
@@ -35,7 +36,7 @@ const listarSecoes = () => {
 
 
 const montarSecoes = () => {
-    const ulMenu  = document.querySelector('#menu-secoes')
+    const ulMenu = document.querySelector('#menu-secoes')
     ulMenu.innerHTML = '' // Limpa o menu (inclusive o HTML antigo)
 
     // === 1. CRIANDO O COPIADO/BOTÃO "TODOS" ===
@@ -68,7 +69,7 @@ const montarSecoes = () => {
         aSecao.innerHTML = elem.secao
 
         // capturando o click dos links das seções específicas
-        aSecao.addEventListener('click', ()=>{
+        aSecao.addEventListener('click', () => {
             // chamando a função produtos filtrados 
             montandoCards(produtosFiltros(elem.id_secao))
         })
@@ -78,7 +79,7 @@ const montarSecoes = () => {
 
         // adicionando o elemento filho li no elemento do dom ul
         ulMenu.appendChild(liSecao)
-    }) 
+    })
 }
 
 montarSecoes()
@@ -113,7 +114,7 @@ inputPesquisa.addEventListener('input', (evento) => {
     // 3. Filtra o array original baseado no título da planta
     const produtosFiltrados = plantasDoJardim.filter((elem) => {
         const tituloNormalizado = normalizarTexto(elem.titulo);
-        
+
         // Verifica se o título da planta contém o termo digitado
         return tituloNormalizado.includes(termoBusca);
     });
@@ -126,37 +127,37 @@ inputPesquisa.addEventListener('input', (evento) => {
 
 //monstando cards 
 
-const montandoCards = (objProdutos) =>{
+const montandoCards = (objProdutos) => {
 
     section_cards.innerHTML = ''
 
-    
 
-    objProdutos.forEach((elem, i)=>{
+
+    objProdutos.forEach((elem, i) => {
 
         const divCrad = document.createElement('div')
-        divCrad.setAttribute('class','card')
+        divCrad.setAttribute('class', 'card')
 
         const imgProduto = document.createElement('img')
-        imgProduto.setAttribute('src',elem.imagem)
-        imgProduto.setAttribute('alt',elem.alt)
-        imgProduto.setAttribute('class','img_card')
+        imgProduto.setAttribute('src', elem.imagem)
+        imgProduto.setAttribute('alt', elem.alt)
+        imgProduto.setAttribute('class', 'img_card')
 
         const h2titulo = document.createElement('h2')
         h2titulo.innerHTML = elem.titulo
 
         const h3Valor = document.createElement('h3')
-        h3Valor.setAttribute('class','valor_card')
-        h3Valor.innerHTML = `R$ ${parseFloat(elem.valor).toFixed(2).replace('.',',')}`
+        h3Valor.setAttribute('class', 'valor_card')
+        h3Valor.innerHTML = `R$ ${parseFloat(elem.valor).toFixed(2).replace('.', ',')}`
 
         const bntCard = document.createElement('button')
-        bntCard.setAttribute('class','bnt_card')
+        bntCard.setAttribute('class', 'bnt_card')
         bntCard.innerHTML = 'Adicionar'
 
 
 
         //REDIRECIONAR PARA A PÁGINA carrinho.html
-        bntCard.addEventListener('click',()=>{
+        bntCard.addEventListener('click', () => {
             window.location.href = "/paginas/carrinho.html"
         })
 
@@ -167,8 +168,6 @@ const montandoCards = (objProdutos) =>{
 
         section_cards.appendChild(divCrad)
     })
-
-    
 
 }
 
