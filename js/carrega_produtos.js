@@ -89,52 +89,6 @@ const produtosFiltros = (idSecao) => {
     return plantasDoJardim.filter(elem => elem.id_secao === idSecao)
 }
 
-//monstando cards 
-
-const montandoCards = (objProdutos) =>{
-
-    section_cards.innerHTML = ''
-
-    
-
-    objProdutos.forEach((elem, i)=>{
-
-        const divCrad = document.createElement('div')
-        divCrad.setAttribute('class','card')
-
-        const imgProduto = document.createElement('img')
-        imgProduto.setAttribute('src',elem.imagem)
-        imgProduto.setAttribute('alt',elem.alt)
-        imgProduto.setAttribute('class','img_card')
-
-        const h2titulo = document.createElement('h2')
-        h2titulo.innerHTML = elem.titulo
-
-        const h3Valor = document.createElement('h3')
-        h3Valor.setAttribute('class','valor_card')
-        h3Valor.innerHTML = `R$ ${parseFloat(elem.valor).toFixed(2).replace('.',',')}`
-
-        const bntCard = document.createElement('button')
-        bntCard.setAttribute('class','bnt_card')
-        bntCard.innerHTML = 'Adicionar'
-
-        divCrad.appendChild(imgProduto)
-        divCrad.appendChild(h2titulo)
-        divCrad.appendChild(h3Valor)
-        divCrad.appendChild(bntCard)
-
-        section_cards.appendChild(divCrad)
-
-
-    })
-
-}
-
-montandoCards(plantasDoJardim); 
-montarSecoes();
-
-
-
 
 
 // --- SISTEMA DE PESQUISA EM TEMPO REAL ---
@@ -167,3 +121,62 @@ inputPesquisa.addEventListener('input', (evento) => {
     // 4. Atualiza a tela chamando a sua função com o resultado do filtro
     montandoCards(produtosFiltrados);
 });
+
+
+
+//monstando cards 
+
+const montandoCards = (objProdutos) =>{
+
+    section_cards.innerHTML = ''
+
+    
+
+    objProdutos.forEach((elem, i)=>{
+
+        const divCrad = document.createElement('div')
+        divCrad.setAttribute('class','card')
+
+        const imgProduto = document.createElement('img')
+        imgProduto.setAttribute('src',elem.imagem)
+        imgProduto.setAttribute('alt',elem.alt)
+        imgProduto.setAttribute('class','img_card')
+
+        const h2titulo = document.createElement('h2')
+        h2titulo.innerHTML = elem.titulo
+
+        const h3Valor = document.createElement('h3')
+        h3Valor.setAttribute('class','valor_card')
+        h3Valor.innerHTML = `R$ ${parseFloat(elem.valor).toFixed(2).replace('.',',')}`
+
+        const bntCard = document.createElement('button')
+        bntCard.setAttribute('class','bnt_card')
+        bntCard.innerHTML = 'Adicionar'
+
+
+
+        //REDIRECIONAR PARA A PÁGINA carrinho.html
+        bntCard.addEventListener('click',()=>{
+            window.location.href = "/paginas/carrinho.html"
+        })
+
+        divCrad.appendChild(imgProduto)
+        divCrad.appendChild(h2titulo)
+        divCrad.appendChild(h3Valor)
+        divCrad.appendChild(bntCard)
+
+        section_cards.appendChild(divCrad)
+    })
+
+    
+
+}
+
+montandoCards(plantasDoJardim)
+montarSecoes()
+
+
+
+
+
+
