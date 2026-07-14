@@ -2,6 +2,9 @@
 //IMPORTANDO O ARQUIVO PRODUTOS.JS [ARRAY]
 import { plantasDoJardim } from "./produtos.js";
 
+//IMPORTANDO O ARQUIVO CARRINHO.JS [ARRAY]
+import { addItem } from "./carrinho.js";
+
 
 //PEGANDO ELEMENTOS DO DOM
 
@@ -155,10 +158,16 @@ const montandoCards = (objProdutos) => {
         bntCard.innerHTML = 'Adicionar'
 
 
+        
 
-        //REDIRECIONAR PARA A PÁGINA carrinho.html
+
+        //REDIRECIONAR PARA A PÁGINA carrinho.html AO CLICAR NO BUTTON ADICIONAR 
         bntCard.addEventListener('click', () => {
-            window.location.href = "/paginas/carrinho.html"
+
+            addItem(elem) //ADICIONANDO UM OBJETO NO CARRINHO
+
+            window.location.href = "/paginas/carrinho.html"//REDIRECIONAR PARA A PÁGINA carrinho.html
+
         })
 
         divCrad.appendChild(imgProduto)
