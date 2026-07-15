@@ -159,6 +159,7 @@ a{
     flex-grow: 1; /* Faz esta seção crescer para empurrar o rodapé para baixo */
 }
 
+
 .card {
     background-color: var(--cor-fundo-card);
     border-radius: 12px;
@@ -177,7 +178,7 @@ a{
 }
 
 .img_card {
-    width: 220px;
+    width: 250px;
     height: 200px;
     object-fit: cover; /* Mantém a proporção da imagem sem distorcer */
     border-radius: 8px;
