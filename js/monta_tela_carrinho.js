@@ -2,7 +2,7 @@ import { listItens, removerItem } from "./carrinho.js";
 
 
 
-//MONTANDO A TELA DO CARRINHO
+//MONTANDO A TELA DO CARRINHO --------------------------------------------------------------------------------------------------------------
 const montaTelaCarrinho = () => {
     const sectionItensCarrinho = document.querySelector('#cards')
 
@@ -15,8 +15,9 @@ const montaTelaCarrinho = () => {
         sectionItem.innerHTML = `<img src='${elem.imagem}' alt=${elem.alt} class="img_card01"/>
         <h3 class='tito_card'> ${elem.titulo}</h3> 
         <h2 class='carrinho_card'>${elem.valor}</h2>
-        <input type="number" name='valor${i}' id='valor${i}' value="${1}">
+        <input type="number" name='valor${i}' id='valor${i}' value="${elem.quantidade}">
         <h2 id='div-result-itens'>${elem.valor * 1}</h2>`
+
 
 
         const imgRemover = document.createElement('img')
