@@ -20,4 +20,12 @@ const listItens = () => {
     return itensSelecionados
 }
 
-export{addItem, listItens}
+//REMOVER ELEMENTO
+const removerItem = (pos) =>{
+    itensCarrinho.splice(pos, 1)
+
+    localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
+
+}
+
+export{addItem, listItens, removerItem}
