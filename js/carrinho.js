@@ -55,7 +55,7 @@ const removerItem = (pos) =>{
 
 }
 
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 const atualizarQuantidade = (pos, novaQtd) => {
     if (itensCarrinho[pos]) {
         itensCarrinho[pos].quantidade = novaQtd;
