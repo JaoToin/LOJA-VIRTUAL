@@ -158,6 +158,7 @@ const montandoCards = (objProdutos) => {
         bntCard.innerHTML = 'Adicionar'
 
 
+      
 
 
 

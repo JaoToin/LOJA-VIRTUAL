@@ -7,6 +7,7 @@ const montaTelaCarrinho = () => {
     const sectionItensCarrinho = document.querySelector('#cards')
 
     sectionItensCarrinho.innerHTML = ''
+    
 
     listItens().forEach((elem,i) => {
 
@@ -14,9 +15,9 @@ const montaTelaCarrinho = () => {
         sectionItem.setAttribute('class', 'card')
         sectionItem.innerHTML = `<img src='${elem.imagem}' alt=${elem.alt} class="img_card01"/>
         <h3 class='tito_card'> ${elem.titulo}</h3> 
-        <h2 class='carrinho_card'>${elem.valor}</h2>
+        <h2 class='carrinho_card'>R$ ${elem.valor}</h2>
         <input type="number" name='valor${i}' id='valor${i}' value="${elem.quantidade}">
-        <h2 id='div-result-itens'>${elem.valor * 1}</h2>`
+        <h2 id='div-result-itens'> R$ ${elem.valor * 0}</h2>`
 
 
 
@@ -36,6 +37,8 @@ const montaTelaCarrinho = () => {
         sectionItensCarrinho.appendChild(sectionItem)
 
     });
+
+    
 
 }
 

@@ -2,14 +2,20 @@
 
 const itensCarrinho = JSON.parse(localStorage.getItem('itensSessao')) || []
 
-//CRIANDO A FUNÇÃO PARA ADICIONAR O ITEM NO ARRAY ----------------------------------------------------------------------
+//CRIANDO A FUNÇÃO PARA ADICIONAR O ITEM NO ARRAY ---------------------------------------------------------------------- modeficado para ter apenas um card por item
+
 
 const addItem = (objItem) => {
+    const itemExistente = itensCarrinho.find(item => item.id === objItem.id);
 
-    itensCarrinho.push(fobjItem(objItem))
+    if (itemExistente) {
+        itemExistente.quantidade += 1;
+    } else {
+        itensCarrinho.push(fobjItem(objItem));
+    }
     
-    localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
-}
+    localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho));
+};
 
 //CRIANDO O ARROW ITEM --------------------------------------------------------------------------------------------------
 
@@ -40,7 +46,7 @@ const listItens = () => {
     return itensSelecionados
 }
 
-//REMOVER ELEMENTO --------------------------------------------------------------------------------------------------------------
+//REMOVER ELEMENTO -------------------------------------------------------------------------------------------------------------- adicionado e modificado
 
 const removerItem = (pos) =>{
     itensCarrinho.splice(pos, 1)
@@ -49,4 +55,15 @@ const removerItem = (pos) =>{
 
 }
 
-export{addItem, listItens, removerItem}
+
+const atualizarQuantidade = (pos, novaQtd) => {
+    if (itensCarrinho[pos]) {
+        itensCarrinho[pos].quantidade = novaQtd;
+        localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho));
+    }
+};
+
+// EXPORT --------------------------------------------------------------------------------------------------------------
+
+export { addItem, listItens, removerItem, atualizarQuantidade };
+

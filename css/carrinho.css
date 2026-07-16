@@ -129,6 +129,12 @@
     height: 25px;
 }
 
+.img-remover:hover{
+    transform: translateY(-5px);
+    background-color: red;
+    border-radius: 20px;
+}
+
 /* INPUT */
 
     input{
