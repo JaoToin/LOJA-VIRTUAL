@@ -1,10 +1,7 @@
-@import url(../css/style_estrutura_paginas.css);
-@import url(../css/style_cadastrro.css);
-
 #titulo h3{
-     color: var(--cor_principal);
+    color: var(--cor_principal);
     font-size: 2.2em;
-    margin-bottom: 20px;
+    margin: 20px;
     letter-spacing: 2px;
     text-align: center;
     margin: 20px;
@@ -21,6 +18,13 @@
     text-align: justify;
     line-height: 35px;
 }
+
+#div-texto{
+    background-color: rgb(234, 211, 255);
+    margin: 10%;
+    border-radius: 25px;
+}
+
 
 /*
 seletor{

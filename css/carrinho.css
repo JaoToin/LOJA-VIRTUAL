@@ -16,43 +16,73 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex-grow: 1; /* Ocupa dinamicamente o espaço da esquerda */
+    flex-grow: 1;
+    width: 100%;
     padding: 0;
-}
-
-/* O CARD INDIVIDUAL (Agora responsivo e elegante) */
-.card {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 16px;
-    width: 75%; /* Mudado de 1200px para 100% */
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
     box-sizing: border-box;
 }
 
-/* IMAGEM DO PRODUTO */
+/* O CARD INDIVIDUAL */
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+/* IMAGENS DO PRODUTO */
+.img_card,
 .img_card01 {
-    width: 300px; /* Reduzido de 250px para equilibrar no formato linha */
+    width: 220px;
     height: 150px;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.card h3,
+.card h2 {
+    margin: 0;
+}
+
+.card input[type="number"] {
+    width: 80px;
+    min-width: 80px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.subtotal-item {
+    font-size: 1rem;
+    color: #444;
+    font-weight: 600;
+    text-align: right;
+    width: 100%;
 }
 
 /* COLUNA DA DIREITA: RESUMO DO CARRINHO */
 #resumo-carrinho {
     flex-shrink: 0;
-    width: 380px; 
+    width: 380px;
+    max-width: 100%;
 }
 
-/* FORMULÁRIO DE RESUMO (Sem a altura gigante fixa de 1000px) */
+/* FORMULÁRIO DE RESUMO */
 #valore {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     border-radius: 24px;
     width: 100%;
     padding: 30px;
@@ -62,24 +92,23 @@
     box-sizing: border-box;
 }
 
-/* CAIXAS INTERNAS (CEP, Valores, Total) */
-#localizador, 
-#valor-total, 
+/* CAIXAS INTERNAS */
+#localizador,
+#valor-total,
 #div-total-pagar {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     text-align: left;
     border-radius: 16px;
-    width: 100%; 
+    width: 100%;
     padding: 20px;
     border: 1px solid #f0f0f0;
-    background-color: #fafafa; /* Um fundo levemente cinza para destacar */
+    background-color: #fafafa;
     margin-bottom: 20px;
     box-sizing: border-box;
 }
 
-/* LABELS (Títulos internos como "VALOR TOTAL") */
 #valore label {
     font-size: 0.85rem;
     font-weight: bold;
@@ -89,7 +118,6 @@
     letter-spacing: 0.5px;
 }
 
-/* INPUT DE CEP */
 #local {
     width: 100%;
     padding: 10px 15px;
@@ -99,8 +127,8 @@
     box-sizing: border-box;
 }
 
-/* BOTÕES DE AÇÃO */
-.confirma, .cancelar {
+.confirma,
+.cancelar {
     width: 100%;
     padding: 14px;
     border: none;
@@ -112,70 +140,90 @@
     transition: all 0.2s ease;
 }
 
-.cancelar:hover{
+.cancelar:hover {
     background-color: red;
     color: #fafafa;
 }
 
-.confirma:hover{
+.confirma:hover {
     background-color: green;
     color: #fafafa;
 }
 
-/* BOTÃO REMOVER */
-
-.img-remover{
-    width: 25px;
-    height: 25px;
+.img-remover {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
 }
 
-.img-remover:hover{
-    transform: translateY(-5px);
+.img-remover:hover {
+    transform: translateY(-3px);
     background-color: red;
-    border-radius: 20px;
+    border-radius: 50%;
 }
 
-/* INPUT */
+input {
+    border-radius: 10px;
+    padding: 5px;
+}
 
-    input{
-        border-radius: 10px;
-        padding: 5px;
-    }
-
-
-
-    /* ==========================================================================
-   Responsividade do Carrinho (Celulares até 768px)
+/* ==========================================================================
+   Responsividade do Carrinho
    ========================================================================== */
-@media (max-width: 768px) {
-    /* Empilha os produtos e o resumo um embaixo do outro  */
+
+@media (max-width: 1024px) {
     #carrinho-container-principal {
-        flex-direction: column; 
-        padding: 20px 3%; 
-        gap: 20px; 
+        flex-direction: column;
+        gap: 24px;
+        padding: 30px 4%;
     }
 
-    /* Os cards passam a ocupar toda a largura da tela  */
-    .card {
-        width: 100%; 
-        flex-direction: column; /* Coloca a foto em cima e o texto embaixo  */
-        text-align: center; 
-        gap: 15px; 
-    }
-
-    /* A imagem se adapta ao tamanho da tela móvel  */
-    .img_card01 {
-        width: 100%; 
-        height: auto; 
-        max-height: 200px; 
-    }
-
-    /* O resumo do carrinho assume 100% da largura no mobile  */
     #resumo-carrinho {
-        width: 100%; 
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        text-align: left;
+        align-items: stretch;
+    }
+
+    .img_card,
+    .img_card01 {
+        width: 100%;
+        height: auto;
+        max-height: 220px;
+    }
+
+    .subtotal-item {
+        text-align: left;
     }
 
     #valore {
-        padding: 20px; 
+        padding: 24px;
+    }
+}
+
+@media (max-width: 540px) {
+    #carrinho-container-principal {
+        padding: 20px 3%;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    #localizador,
+    #valor-total,
+    #div-total-pagar {
+        padding: 16px;
+    }
+
+    .confirma,
+    .cancelar {
+        padding: 12px;
+        font-size: 0.95rem;
     }
 }
