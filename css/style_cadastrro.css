@@ -118,14 +118,41 @@ button:hover{
 }
 
 
-
-/* 8. Responsividade do Formulário para Celulares */
-@media (max-width: 768px) {
+/* ==========================================================================
+   Responsividade do Formulário e Textos para Celulares
+   ========================================================================== */
+   @media (max-width: 768px) {
     #form-pessoa {
-        padding: 25px 15px;   /* Reduz o espaço interno em telas pequenas */
+        width: 100%; /* Remove os 650px fixos para caber na tela  */
+        max-width: 100%; 
+        padding: 20px 15px; 
+    }
+
+    /* Força todos os campos de texto a não vazarem da tela  */
+    .input01, .input02, .input03 {
+        width: 100% !important; 
+        box-sizing: border-box; 
     }
 
     #div-button {
-        flex-direction: column; /* Coloca um botão embaixo do outro no celular */
+        flex-direction: column; /* Coloca os botões em coluna no celular  */
+        height: auto; 
+        gap: 15px; 
+    }
+
+    #div-button button {
+        margin-left: 0; 
+        width: 100%; 
+    }
+
+    /* Ajuste para não estourar a tela nas páginas de texto do  */
+    #paragrafo01, #paragrafo02 {
+        margin-left: 10px !important; 
+        margin-right: 10px !important; 
+    }
+
+    #texto p {
+        margin: 15px !important; 
+        font-size: 1.2em; 
     }
 }

@@ -141,3 +141,41 @@
         border-radius: 10px;
         padding: 5px;
     }
+
+
+
+    /* ==========================================================================
+   Responsividade do Carrinho (Celulares até 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Empilha os produtos e o resumo um embaixo do outro  */
+    #carrinho-container-principal {
+        flex-direction: column; 
+        padding: 20px 3%; 
+        gap: 20px; 
+    }
+
+    /* Os cards passam a ocupar toda a largura da tela  */
+    .card {
+        width: 100%; 
+        flex-direction: column; /* Coloca a foto em cima e o texto embaixo  */
+        text-align: center; 
+        gap: 15px; 
+    }
+
+    /* A imagem se adapta ao tamanho da tela móvel  */
+    .img_card01 {
+        width: 100%; 
+        height: auto; 
+        max-height: 200px; 
+    }
+
+    /* O resumo do carrinho assume 100% da largura no mobile  */
+    #resumo-carrinho {
+        width: 100%; 
+    }
+
+    #valore {
+        padding: 20px; 
+    }
+}

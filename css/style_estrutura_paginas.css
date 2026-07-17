@@ -178,7 +178,7 @@ a{
 }
 
 .img_card {
-    width: 250px;
+    width: 220px;
     height: 200px;
     object-fit: cover; /* Mantém a proporção da imagem sem distorcer */
     border-radius: 8px;
@@ -293,5 +293,41 @@ a{
     #rodape {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+
+
+
+
+/* ==========================================================================
+   7. Responsividade da Estrutura Geral (Telas de Celular)
+   ========================================================================== */
+   @media (max-width: 768px) {
+    #cabecalho, #nav-secoes {
+        flex-direction: column; 
+        gap: 15px; 
+        text-align: center; 
+    }
+
+    #menu ul, #menu-secoes {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 15px; 
+    }
+
+    /* Ajusta a barra de pesquisa para preencher a lateral móvel  */
+    #pesquisa-secoes {
+        padding: 15px 10px; 
+    }
+    
+    #pesquisa {
+        width: 95%; 
+    }
+
+    #rodape {
+        flex-direction: column; 
+        text-align: center; 
+        gap: 25px; 
     }
 }
